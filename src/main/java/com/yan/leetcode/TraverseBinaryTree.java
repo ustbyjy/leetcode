@@ -1,5 +1,11 @@
 package com.yan.leetcode;
 
+/**
+ * 遍历二叉树
+ * 
+ * @author yan
+ *
+ */
 public class TraverseBinaryTree {
 
 	public static void main(String[] args) {
