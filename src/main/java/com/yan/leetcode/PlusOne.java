@@ -1,5 +1,7 @@
 package com.yan.leetcode;
 
+import org.junit.Test;
+
 /**
  * Plus One
  *
@@ -8,6 +10,13 @@ package com.yan.leetcode;
  * @create 2016-08-31 10:57
  */
 public class PlusOne {
+    @Test
+    public void test() {
+        int[] digits = new int[]{9, 9, 9, 9, 9, 9, 9};
+        print(digits);
+        int[] newDigits = plusOne(digits);
+        print(newDigits);
+    }
 
     public int[] plusOne(int[] digits) {
         int[] newDigits = digits;
@@ -33,5 +42,12 @@ public class PlusOne {
         }
 
         return newDigits;
+    }
+
+    private void print(int[] digits) {
+        for (int i = 0; i < digits.length; i++) {
+            System.out.print(digits[i] + " ");
+        }
+        System.out.println();
     }
 }
