@@ -18,6 +18,12 @@ public class ReverseString {
         return sb.toString();
     }
 
+    /**
+     * 效率次之
+     *
+     * @param s
+     * @return
+     */
     public String reverseString2(String s) {
         return new StringBuilder(s).reverse().toString();
     }
@@ -28,5 +34,25 @@ public class ReverseString {
         for (int i = array.length - 1; i >= 0; i--)
             reverse += array[i];
         return reverse;
+    }
+
+    /**
+     * 效率最高
+     *
+     * @param s
+     * @return
+     */
+    public String reverseString4(String s) {
+        char[] chars = s.toCharArray();
+        int i = 0, j = s.length() - 1;
+        while (i < j) {
+            char tmp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = tmp;
+            i++;
+            j--;
+        }
+
+        return new String(chars);
     }
 }
