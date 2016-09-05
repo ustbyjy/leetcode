@@ -23,13 +23,15 @@ public class BinaryTreeLevelOrderTraversal {
         head.right.right = new TreeNode(7);
 
         List<List<Integer>> levelList = levelOrder(head);
+
         System.out.println(levelList);
-        for (List<Integer> valueList : levelList) {
-            for (int val : valueList) {
-                System.out.print(val + " ");
-            }
-            System.out.println();
-        }
+
+//        for (List<Integer> valueList : levelList) {
+//            for (int val : valueList) {
+//                System.out.print(val + " ");
+//            }
+//            System.out.println();
+//        }
     }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
