@@ -29,6 +29,7 @@ public class IntersectionOfTwoLinkedLists {
             tempA.next = null;   // recover original structure
             return null;
         }
+        // fast是slow速度的两倍，从相遇点开始，fast以一倍速度和start走同样的距离，在相交点相遇
         ListNode start = headA;
         while (start != fast) {
             fast = fast.next;
